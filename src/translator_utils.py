@@ -4,11 +4,13 @@ import json
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-# configure openai - api key
-working_dir = os.path.dirname(os.path.abspath(__file__))
-config_data = json.load(open(f"{working_dir}/config.json"))
-OPENAI_API_KEY = config_data["OPENAI_API_KEY"]
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+openapi_key = st.secrets.get("OPENAI_API_KEY")
+if not openapi_key:
+    logging.error("OPENAI_API_KEY is not set in Streamlit secrets")
+    st.error("OPENAI_API_KEY is not set. Please set it in your Streamlit secrets.")
+else:
+    os.environ['OPENAI_API_KEY'] = openapi_key
+
 
 llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
