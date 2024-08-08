@@ -3,8 +3,6 @@ import requests
 import base64
 from translator_utils import translate
 
-# Set your OpenAI API key here
-OPENAI_API_KEY = 'YOUR_API_KEY'
 
 st.set_page_config(
     page_title="Translator.AI",
