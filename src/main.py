@@ -31,7 +31,7 @@ if st.button("Translate"):
 
 # Adding Text-to-Speech Functionality
 st.header("Text-to-Speech")
-text_for_speech = st.text_input("Enter text for speech synthesis:")
+text_for_speech = translated_text
 
 def text_to_speech(text):
     headers = {
