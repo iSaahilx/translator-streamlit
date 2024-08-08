@@ -16,7 +16,7 @@ llm = ChatOpenAI(model="gpt-4o", temperature=0)
 def translate(input_language, output_language, input_text):
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "You are a helpful assistant that translates {input_language} to {output_language}."),
+            ("system", "You are an expert translator that translates {input_language} to {output_language}."),
             ("human", "{input}")
         ]
     )
