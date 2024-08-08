@@ -3,7 +3,6 @@ import requests
 import base64
 from translator_utils import translate
 
-
 st.set_page_config(
     page_title="Translator.AI",
     page_icon="🈶",
@@ -31,7 +30,7 @@ if st.button("Translate"):
 
 # Adding Text-to-Speech Functionality
 st.header("Text-to-Speech")
-text_for_speech = translated_text
+text_for_speech = st.text_input("Enter text for speech synthesis:")
 
 def text_to_speech(text):
     headers = {
