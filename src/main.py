@@ -13,7 +13,7 @@ st.title("🈶 Translator App  - GPT-4o")
 col1, col2 = st.columns(2)
 
 with col1:
-    input_languages_list = ["English", "French", "German", "Latin", "Spanish", "Hindi", "Tamil", "Telugu", "Marathi"]
+    input_languages_list = ["English", "Sanskrit"]
     input_language = st.selectbox(label="Input Language", options=input_languages_list)
 
 with col2:
